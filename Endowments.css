@@ -1,0 +1,214 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.rwd-table {
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rwd-table tr:first-child {
+    border-top: none;
+    background: #f39326;
+    color: #fff;
+}
+
+/*.rwd-table tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #f5f9fc;
+}*/
+
+.rwd-table tr:nth-child(odd):not(:first-child) {
+    background-color: #dcdee0ab;
+}
+
+.rwd-table th {
+    display: none;
+}
+
+.rwd-table td {
+    display: block;
+}
+
+.rwd-table td:first-child {
+    margin-top: .5em;
+}
+
+.rwd-table tr:last-child {
+    margin-bottom: .5em;
+    /*color: rgb(255, 85, 0);*/
+    border: 1px solid;
+    border-color: transparent transparent rgb(232, 145, 6) transparent;
+}
+
+.rwd-table td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: 120px;
+    display: inline-block;
+    color: #000;
+}
+
+.rwd-table th,
+.rwd-table td {
+    text-align: left;
+}
+
+.rwd-table {
+    color: #333;
+    border-radius: .4em;
+    overflow: hidden;
+}
+
+.rwd-table tr {
+    border-color: #bfbfbf;
+}
+
+.rwd-table th,
+.rwd-table td {
+    padding: .5em 1em;
+}
+
+.rwd-table tr:hover:not(:first-child) {
+    background-color: #d8e7f3;
+    border-left: 2px solid #f39326;
+    border-right: 2px solid #f39326;
+}
+
+@media screen and (max-width: 601px) {
+    .rwd-table tr:nth-child(2) {
+        border-top: none;
+    }
+
+}
+
+
+
+@media screen and (min-width: 600px) {
+
+
+    .rwd-table td:before {
+        display: none;
+    }
+
+    .rwd-table th,
+    .rwd-table td {
+        display: table-cell;
+        padding: .25em .5em;
+    }
+
+    .rwd-table th:first-child,
+    .rwd-table td:first-child {
+        padding-left: 0;
+    }
+
+    .rwd-table th:last-child,
+    .rwd-table td:last-child {
+        padding-right: 0;
+    }
+
+    .rwd-table th,
+    .rwd-table td {
+        padding: 1em !important;
+    }
+}
+
+
+body {
+    background: #ffffff;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.4em;
+    color: #ffffff;
+    background-color: #000;
+    text-transform: uppercase;
+}
+
+.subTitle {
+    background-color: rgba(87, 85, 85, 0.073);
+    color: rgb(16, 124, 34);
+    margin-bottom: 30px;
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+    padding: 5px;
+    border: 2px solid;
+    border-color: transparent rgb(94, 43, 3);
+}
+
+.container {
+
+    display: block;
+    text-align: center;
+}
+
+
+@-webkit-keyframes leftRight {
+    0% {
+        -webkit-transform: translateX(0)
+    }
+
+    25% {
+        -webkit-transform: translateX(-10px)
+    }
+
+    75% {
+        -webkit-transform: translateX(10px)
+    }
+
+    100% {
+        -webkit-transform: translateX(0)
+    }
+}
+
+@keyframes leftRight {
+    0% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateX(-10px)
+    }
+
+    75% {
+        transform: translateX(10px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
+
+
+
+@media only screen and (min-width:60px) and (max-width: 599px) {
+
+    /*
+    .rwd-table td {
+        background-image: -webkit-linear-gradient(left, #ff9924 137px, #f5f9fc 1px, #f5f9fc 100%);
+        background-image: -moz-linear-gradient(left, #ff9924 137px, #f5f9fc 1px, #f5f9fc 100%);
+        background-image: -o-linear-gradient(left, #ff9924 137px, #f5f9fc 1px, #f5f9fc 100%);
+        background-image: -ms-linear-gradient(left, #ff9924 137px, #f5f9fc 1px, #f5f9fc 100%);
+        background-image: linear-gradient(left, #ff9924 137px, #f5f9fc 1px, #f5f9fc 100%);
+    }
+
+    .rwd-table td:nth-child(odd) {
+        background-image: -webkit-linear-gradient(left, #ff950bb2 137px, #ebf3f9 1px, #ebf3f9 100%);
+        background-image: -moz-linear-gradient(left, #ff950bb2 137px, #ebf3f9 1px, #ebf3f9 100%);
+        background-image: -o-linear-gradient(left, #ff950bb2 137px, #ebf3f9 1px, #ebf3f9 100%);
+        background-image: -ms-linear-gradient(left, #ff950bb2 137px, #ebf3f9 1px, #ebf3f9 100%);
+        background-image: linear-gradient(left, #ff950bb2 137px, #ebf3f9 1px, #ebf3f9 100%);
+    }*/
+    tr {
+        color: rgb(255, 85, 0);
+    }
+
+
+}

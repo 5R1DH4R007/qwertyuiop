@@ -1,0 +1,238 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
+
+
+body {
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    background: #f2f2f2;
+    color: rgba(0, 0, 0, .87);
+    font-family: 'Roboto', sans-serif;
+}
+
+.accordion {
+    margin: auto;
+    width: 100%;
+}
+
+.accordion input {
+    display: none;
+}
+
+.box {
+    position: relative;
+    background: white;
+    height: 64px;
+    transition: all .15s ease-in-out;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+}
+
+header.box {
+    background: #000000;
+    box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px -2px rgba(0, 0, 0, .12), 0 2px 4px -4px rgba(0, 0, 0, .24);
+}
+
+
+header .box-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 20pt;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    cursor: default;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.box-title {
+    width: calc(100% - 40px);
+    overflow: scroll;
+    height: 64px;
+    line-height: 64px;
+    padding: 0 20px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.box-content {
+    width: calc(100% - 40px);
+    padding: 30px 20px;
+    font-size: 11pt;
+    color: rgba(0, 0, 0, 0.995);
+    display: none;
+}
+
+.box-close {
+    position: absolute;
+    height: 64px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+}
+
+input:checked+.box {
+    height: auto;
+    margin: 16px 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+}
+
+input:checked+.box .box-title {
+    border-bottom: 1px solid rgba(0, 0, 0, .18);
+}
+
+input:checked+.box .box-content,
+input:checked+.box .box-close {
+    display: inline-block;
+}
+
+.arrows section .box-title {
+    padding-left: 44px;
+    width: calc(100% - 64px);
+}
+
+.arrows section .box-title:before {
+    position: absolute;
+    display: block;
+    content: '\203a';
+    font-size: 20pt;
+    left: 20px;
+    top: -2px;
+    transition: transform .15s ease-in-out;
+    color: rgba(0, 0, 0, .54);
+    color: rgba(228, 89, 2, 0.908);
+}
+
+input:checked+section.box .box-title:before {
+    transform: rotate(90deg);
+}
+
+/**************************************************************************************/
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i';
+
+ol.gradient-list>li,
+ol.gradient-list>li::before {
+    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+ol.gradient-list {
+    counter-reset: gradient-counter;
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: -20px;
+}
+
+ol.gradient-list>li {
+    background: rgba(225, 224, 224, 0.474);
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    counter-increment: gradient-counter;
+    margin-top: 0.5rem;
+    height: auto;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+}
+
+ol.gradient-list>li::before,
+ol.gradient-list>li::after {
+    background: linear-gradient(135deg, #ff8d23 0%, #fae3c8 100%);
+    border-radius: 1rem 1rem 0 1rem;
+    content: '';
+    height: 2rem;
+    left: -1rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0rem;
+    width: 2rem;
+    box-sizing: border-box;
+}
+
+ol.gradient-list>li::before {
+    align-items: flex-end;
+    content: counter(gradient-counter);
+    color: #1d1f20;
+    display: flex;
+    font: 900 1.5em/1 'Montserrat';
+    justify-content: center;
+    padding: 0.125em 0.25em;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/*************************************************************************/
+ol.gl2>li::before,
+ol.gl2>li::after {
+    background: linear-gradient(135deg, #ff2a239e 0%, #fae3c8 100%);
+    border-radius: 1rem 1rem 0 1rem;
+    content: '';
+    height: 2rem;
+    left: -1rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0rem;
+    width: 2rem;
+    box-sizing: border-box;
+
+}
+
+
+ol.gl2>li::before {
+    align-items: flex-end;
+    content: counter(gradient-counter);
+    color: #1d1f20;
+    display: flex;
+    font: 900 1em/1 'Montserrat';
+    justify-content: center;
+    padding: 0.125em 0.25em;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/*****************************************************************************/
+ol.gl3>li::before,
+ol.gl3>li::after {
+    background: linear-gradient(135deg, #0c940c9e 0%, #ccf4cd 100%);
+    border-radius: 1rem 1rem 0 1rem;
+    content: '';
+    height: 2rem;
+    left: -1rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0rem;
+    width: 2rem;
+    box-sizing: border-box;
+
+}
+
+
+ol.gl3>li::before {
+    align-items: flex-end;
+    content: counter(gradient-counter);
+    color: #1d1f20;
+    display: flex;
+    font: 900 1em/1 'Montserrat';
+    justify-content: center;
+    padding: 0.125em 0.25em;
+    z-index: 1;
+    box-sizing: border-box;
+}
